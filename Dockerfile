@@ -22,7 +22,7 @@ RUN apt-get update && apt-get install -my \
   vim
 
 ################################################################################
-# Build Mongo Part
+# Build Panako
 ################################################################################
 
 # get latest panako build
@@ -31,7 +31,7 @@ RUN cd /home && git clone https://github.com/JorenSix/Panako.git
 #RUN rm /home/Panako-latest-src.zip
 
 ################################################################################
-# Build gearman part
+# Rebuild broken package
 ################################################################################
 
 # adding a missing file - missing in the latest release (will be removed if author is fixing it)
@@ -60,7 +60,8 @@ RUN chmod 777 /usr/bin/panako
 # Volumes
 ################################################################################
 
-VOLUME ["/g/google_drive/projects/docker_panako", "/home/audioinput"]
+# change this path to the path you are using.
+VOLUME ["/h/projects/panakofiles", "/home/audioinput"]
 
 ################################################################################
 # Ports
