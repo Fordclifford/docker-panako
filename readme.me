@@ -2,13 +2,23 @@ Docker-Panako
 
 A docker environment for Panako. It builds a docker image for the panako acustic fingerprint system
 
-Code Example
+Code Examples
+How to build your docker image
 
-//TODO add example docker command
+1. Clone the repository
+2. go to the cloned rep and execute:  docker build -t panako .
+
+How to use the docker image
+Since it is a "no production build", you need to know what you are doing here. Most likely, you just want to take a look at panako and check out its features and run a couple of tests.
+
+Mission -> Store a mp3 into the db
+1. Clone the repo and build it (see above)
+2. Run it in a container (think about mapping a volume into the container, it helps to add the mp3 files) -> docker run -it --rm panako bash
+3. To store a file -> panako store filename.mp3
 
 Contributors
 
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
+I am just a humble docker fan and run a couple of projects. Main credit goes to https://github.com/JorenSix/Panako
 
 License
 BEER1.0 - as in free beer.
