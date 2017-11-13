@@ -49,6 +49,9 @@ RUN cd /home/Panako/build && ant doc
 RUN cp /home/Panako/doc/panako /usr/bin
 RUN chmod 777 /usr/bin/panako
 
+# https://github.com/Pixelartist/docker-panako/issues/1
+RUN mkdir /opt/panako/dbs
+
 ################################################################################
 # Configure the rest
 ################################################################################
